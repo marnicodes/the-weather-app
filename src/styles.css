@@ -1,0 +1,59 @@
+h1 {
+  padding: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  padding: 10px;
+  text-align: justify;
+}
+h3 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+p {
+  margin: 0;
+  padding: 10px;
+}
+
+a {
+  text-decoration: solid;
+  color: black;
+}
+
+.currentTemperature {
+  font-weight: bold;
+}
+.box {
+  border: solid #698796;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 600px;
+  background: #7799aa;
+}
+
+.rain-icon {
+  color: #bfce3b;
+  font-size: 80px;
+}
+.rain-icon:hover,
+.sun-rain-city-icon:hover,
+.rain-city-icon:hover,
+.cloud-sun-icon:hover {
+  color: #909c1e;
+}
+.sun-rain-city-icon,
+.rain-city-icon,
+.cloud-sun-icon {
+  color: #bfce3b;
+}
+
+.main-temp {
+  font-size: 40px;
+}
+.row {
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
