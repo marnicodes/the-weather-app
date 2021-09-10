@@ -13,14 +13,21 @@ let day = days[now.getDay()];
 let currentDate = document.querySelector("#current-date");
 currentDate.innerHTML = `${day} ${hour}:${minutes}`;
 
-//function searchCity(event) {
+//function tempCelc(event) {
 //event.preventDefault();
-//let city = document.querySelector("#city");
-//let cityInput = document.querySelector("#city-input");
-//city.innerHTML = `${cityInput.value}`;
-//}
-//let searchCityForm = document.querySelector("#search-city");
-//searchCityForm.addEventListener("submit", searchCity);
+//let currentCelc = document.querySelector("#currentTemperature"); // call back func to first action
+//currentCelc.innerHTML = "14";}
+//let celcius = document.querySelector("#celcius"); //selecting first action with a click
+//celcius.addEventListener("click", tempCelc);
+
+//function tempFahr(event) {
+//event.preventDefault();
+//let currentFahr = document.querySelector("#currentTemperature");
+//currentFahr.innerHTML = "57";}
+
+//let fahrenheit = document.querySelector("#fahrenheit");
+//fahrenheit.addEventListener("click", tempFahr);
+
 ////////// the city searching code
 function searchCity(city) {
   let apiKey = "ff4151e1f397ca52bc01c2b445760854";
@@ -36,14 +43,9 @@ let searchCityForm = document.querySelector("#search-city");
 searchCityForm.addEventListener("submit", handleSubmit);
 
 searchCity("Stockholm");
+
 ///////////the weathering code
-function displayWeather(response) {
-  console.log(response.data);
-  document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#currentTemperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
-}
+
 function searchPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
