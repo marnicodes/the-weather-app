@@ -13,6 +13,16 @@ let day = days[now.getDay()];
 let currentDate = document.querySelector("#current-date");
 currentDate.innerHTML = `${day} ${hour}:${minutes}`;
 
+function searchCity(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city");
+  let cityInput = document.querySelector("#city-input");
+  city.innerHTML = `${cityInput.value}`;
+}
+
+let searchCityForm = document.querySelector("#search-city");
+searchCityForm.addEventListener("submit", searchCity);
+
 //function tempCelc(event) {
 //event.preventDefault();
 //let currentCelc = document.querySelector("#currentTemperature"); // call back func to first action
