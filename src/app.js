@@ -46,6 +46,13 @@ function displayWeather(response) {
   document.querySelector("#currentTemperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector("#wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#real-feel").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
 }
 
 function searchPosition(position) {
