@@ -53,6 +53,8 @@ function displayWeather(response) {
   document.querySelector("#real-feel").innerHTML = Math.round(
     response.data.main.feels_like
   );
+  document.querySelector("#weather-description").innerHTML =
+    response.data.weather[0].description;
 }
 
 function searchPosition(position) {
