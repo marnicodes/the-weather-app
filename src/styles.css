@@ -7,6 +7,11 @@ h2 {
   padding: 10px;
   text-align: center;
 }
+
+h2.weather-details::first-letter {
+  text-transform: capitalize;
+}
+
 h3 {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -34,10 +39,6 @@ footer {
   margin: 0 auto;
   width: 600px;
   background: #7799aa;
-}
-
-div.weather-details::first-letter {
-  text-transform: capitalize;
 }
 
 .rain-icon {
