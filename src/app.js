@@ -63,6 +63,10 @@ function displayWeather(response) {
   );
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].description;
+
+  document
+    .querySelector("#icon")
+    .setAttribute("src", `http://openweathermap.org/img/wn/10d@2x.png`);
 }
 
 function searchPosition(position) {
