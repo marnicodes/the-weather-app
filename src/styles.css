@@ -36,6 +36,10 @@ footer {
   background: #7799aa;
 }
 
+div.weather-details::first-letter {
+  text-transform: capitalize;
+}
+
 .rain-icon {
   color: #bfce3b;
   font-size: 80px;
