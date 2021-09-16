@@ -8,10 +8,6 @@ h2 {
   text-align: center;
 }
 
-h2.weather-details::first-letter {
-  text-transform: capitalize;
-}
-
 h3 {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -29,7 +25,9 @@ a {
 footer {
   text-align: center;
 }
-
+#weather-desciption:first-letter {
+  text-transform: capitalize;
+}
 .currentTemperature {
   font-weight: bold;
 }
