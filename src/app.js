@@ -64,9 +64,12 @@ function displayWeather(response) {
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].description;
 
-  document
+  document ///to change an attribute.. read more
     .querySelector("#icon")
-    .setAttribute("i", `http://openweathermap.org/img/wn/10d@2x.png`);
+    .setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 function searchPosition(position) {
