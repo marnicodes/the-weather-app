@@ -25,7 +25,7 @@ a {
 footer {
   text-align: center;
 }
-#weather-desciption:first-letter {
+.weather-description:first-letter {
   text-transform: capitalize;
 }
 .currentTemperature {
