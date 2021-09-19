@@ -89,3 +89,30 @@ function handleGeolocation(event) {
 
 let geolocationButton = document.querySelector("#geo-button");
 geolocationButton.addEventListener("click", handleGeolocation);
+
+////// the temperature code
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temp = document.querySelector("#currentTemperature");
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  temp.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temp = document.querySelector("#currentTemperature");
+  temp.innerHTML = Math.round(celciusTemperature);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", displayCelciusTemperature);
+
+let celciusTemperature = null;

@@ -52,35 +52,36 @@
        <div class="container">
         <div class="row">
           <div class="col-6">
+            <div class="clearfix weather-info">
             <h2>
-              <i class="fas fa-cloud-rain rain-icon" id="icon">
-              </i>
+              <img 
+               src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+               alt="Few clouds"
+               class="fas fa-cloud-rain rain-icon" 
+               id="icon"
+              />
               <div class="temperature">
                 <span class="currentTemperature" id="currentTemperature">
                     14
                 </span>
-                <span class="celcius">°C
-                </span>
+                <span class="unit">
+                  <a href="#" id="celsius-link" class="active">°C</a>
                 |
-                <span class="fahrenheit"><a href="#">°F</a></span>    
+                  <a href="#" id="fahrenheit-link" class=>°F</a>
+                </span>    
               </div>
             </h2>
+            </div>
           </div>
           <div class="col-6" id="weather-details">
            <h2>
-             <p class="wind m-0 p-0">
               Wind <span id="wind-speed">3</span>km/h
-             </p>
              <br />
-             <p class="wind m-0 p-0">
              Humidity <span id="humidity"></span>%
-             </p>
              <br />
-             <p class="wind m-0 p-0">
              Real feel <span id="real-feel"></span>°
-             </p>
              <br />
-             <p class="weather-description m-0 p-0"><span id="weather-description"></span>
+             <p id="weather-description"></p>
              </p>
            </h2>
           </div>
