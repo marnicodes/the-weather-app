@@ -21,15 +21,6 @@ let day = days[now.getDay()];
 let currentDate = document.querySelector("#current-date");
 currentDate.innerHTML = `${day} ${hour}:${minutes}`;
 
-//function searchCity(event) {
-//event.preventDefault();
-//let city = document.querySelector("#city");
-//let cityInput = document.querySelector("#city-input");
-//city.innerHTML = `${cityInput.value}`;}
-
-//let searchCityForm = document.querySelector("#search-city");
-//searchCityForm.addEventListener("submit", searchCity);
-
 /////////// the city searching code
 
 function searchCity(city) {
@@ -62,7 +53,7 @@ function displayWeather(response) {
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].description;
 
-  celciusTemperature = response.data.main.temp;
+  celsiusTemperature = response.data.main.temp;
 
   document ///to change an attribute.. read more
     .querySelector("#icon")
@@ -94,19 +85,19 @@ geolocationButton.addEventListener("click", handleGeolocation);
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  //celciusLink.classList.remove("active");
+  //celsiusLink.classList.remove("active");
   //fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#currentTemperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-function displayCelciusTemperature(event) {
+function displayCelsiusTemperature(event) {
   event.preventDefault();
-  //celciusLink.classList.add("active");
+  //celsiusLink.classList.add("active");
   //fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#currentTemperature");
-  temperatureElement.innerHTML = Math.round(celciusTemperature);
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 let celciusTemperature = null; //to keep track of the metric unit of temp
@@ -114,7 +105,7 @@ let celciusTemperature = null; //to keep track of the metric unit of temp
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
-let celciusLink = document.querySelector("#celcius-link");
-//celciusLink.addEventListener("click", displayCelciusTemperature);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Stockholm");
