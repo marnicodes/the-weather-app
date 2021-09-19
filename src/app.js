@@ -115,5 +115,6 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celciusLink = document.querySelector("#celcius-link");
+//celciusLink.addEventListener("click", displayCelciusTemperature);
 
 searchCity("Stockholm");
