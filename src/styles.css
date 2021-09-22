@@ -13,16 +13,13 @@ h2 {
   text-align: left;
 }
 
-h3 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-family: "Bebas Neue", cursive;
-}
-
-img {
+div.container {
   display: block;
   padding: 0;
-  font-family: "Bebas Neue", cursive;
+}
+
+img#icon {
+  display: block;
   float: right;
 }
 
@@ -67,19 +64,13 @@ a:hover {
   width: 600px;
   background: #7799aa;
 }
-.container {
+
+.weather-forecast {
+  text-align: center;
   font-family: "Bebas Neue", cursive;
 }
-.rain-icon:hover,
-.sun-rain-city-icon:hover,
-.rain-city-icon:hover,
-.cloud-sun-icon:hover {
-  color: #909c1e;
-}
-.sun-rain-city-icon,
-.rain-city-icon,
-.cloud-sun-icon {
-  color: #bfce3b;
+.container {
+  font-family: "Bebas Neue", cursive;
 }
 
 .main-temp {
@@ -89,4 +80,7 @@ a:hover {
   text-align: center;
   padding-bottom: 10px;
   padding-top: 10px;
+}
+.weather-forecast-temp-min {
+  opacity: 60%;
 }

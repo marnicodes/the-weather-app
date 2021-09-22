@@ -59,7 +59,6 @@
               <img 
                src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
                alt="Few clouds"
-               class="fas fa-cloud-rain rain-icon" 
                id="icon"
               />
           </div>
@@ -89,62 +88,27 @@
           </div>
          </div>
         </div>
-      <h3>
-        <div class="container">
-          <div class="row">
-            <div class="col-4">
-              <i class="fas fa-cloud-sun cloud-sun-icon"></i>
-              <br />
-              <a href="">London</a>
-            </div>
-            <div class="col-4">
-              <i class="fas fa-cloud-sun-rain sun-rain-city-icon"></i>
-              <br />
-              <a href="">New York</a>
-            </div>
-            <div class="col-4">
-              <i class="fas fa-cloud-rain rain-city-icon"></i>
-              <br />
-              <a href="">Tokyo</a>
-            </div>
-          </div>
-        </div>
-      </h3>
       <p>
         <strong>5-day Weather Prognosis</strong>
-        <div class="container">
+        <div class="weather-forecast">
           <div class="row">
-            <div class="col">
-              <i class="fas fa-cloud-rain"></i>
-              <br />
-              Saturday <strong>15°</strong>|10°
+            <div class="col-2">
+              <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" width="40"/>
+            <div class="weather-forecast-date">Sat</div> 
+            <div class="weather-forecast-temperatures">
+              <span class="weather-forecast-temp-max">15°</span>
+              |
+              <span class="weather-forecast-temp-min">10°</span>
             </div>
-            <div class="col">
-              <i class="fas fa-cloud-sun-rain"></i>
-              <br />
-              Sunday <strong>19°</strong>|12°
             </div>
-            <div class="col">
-              <i class="fas fa-cloud-rain"></i>
-              <br />
-              Monday <strong>14°</strong>|11°
-            </div>
-            <div class="col">
-              <i class="fas fa-cloud-rain"></i>
-              <br />
-              Tuesday <strong>14°</strong>|10°
-            </div>
-            <div class="col">
-              <i class="fas fa-cloud-sun"></i>
-              <br />
-              Wednesday <strong>19°</strong>|13°
-            </div>
+            
           </div>
         </div>
       </p>
-     </div>
+
       
     <script src="src/app.js"></script>
    <footer><small><a href="https://github.com/marnicodes/the-weather-app" target="_blank">Open-source code</a>, by <a href="https://se.linkedin.com/in/marni-ali-096a5254" target="_blank">Marni Ali</a></small></footer>
   </body>
+  </div>
 </html>
