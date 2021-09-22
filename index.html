@@ -10,6 +10,9 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles.css" />
     <script
       src="https://kit.fontawesome.com/ad910589ab.js"
@@ -30,7 +33,7 @@
                 type="search"
                 placeholder="Search for a city"
                 autocomplete="off"
-                autofocus="on"
+                autofocus="off"
                 id="city-input"
               />
               <button class="btn btn-outline-dark" type="submit" id="search-button">
@@ -43,15 +46,15 @@
           </div>
         </nav>
       </header>
-      <h1>
-          <span id="city"></span>
-          <br />
-          <span id="current-date">Friday 15:00
-          </span>
+      <h1><span id="city"></span> 
+        <br />
       </h1>
-       <div class="container">
+      <div class="last-updated">Last updated:
+        <span id="current-date"></span>
+      </div>
+      <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div class="col-4">
             <h2>
               <img 
                src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
@@ -59,18 +62,20 @@
                class="fas fa-cloud-rain rain-icon" 
                id="icon"
               />
+          </div>
+          <div class="col-4">
               <div class="temperature">
                 <span class="currentTemperature" id="currentTemperature">
                 </span>
                 <span class="unit">
-                  <a href="#" id="celsius-link" class="active">°C</a>
+                  <a href="#" id="celsius-link" style="text-decoration: none" class="active">°C</a>
                 |
-                  <a href="#" id="fahrenheit-link" class=>°F</a>
+                  <a href="#" id="fahrenheit-link" style="text-decoration: none" class="active">°F</a>
                 </span>    
               </div>
             </h2>
           </div>
-          <div class="col-6" id="weather-details">
+          <div class="col-4" id="weather-details">
            <h2>
              <br />
               Wind <span id="wind-speed">3</span>km/h
@@ -79,8 +84,7 @@
              <br />
              Real feel <span id="real-feel"></span>°
              <br />
-             <p id="weather-description"></p>
-             </p>
+             <span id="weather-description"></span>
            </h2>
           </div>
          </div>

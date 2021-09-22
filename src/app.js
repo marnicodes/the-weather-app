@@ -11,7 +11,7 @@ let days = [
   "Sunday",
   "Monday",
   "Tuesday",
-  "Wedsday",
+  "Wednesday",
   "Thursday",
   "Friday",
   "Saturday",
@@ -85,8 +85,8 @@ geolocationButton.addEventListener("click", handleGeolocation);
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  //celsiusLink.classList.remove("active");
-  //fahrenheitLink.classList.add("active");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#currentTemperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
@@ -94,13 +94,13 @@ function displayFahrenheitTemperature(event) {
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
-  //celsiusLink.classList.add("active");
-  //fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#currentTemperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-let celciusTemperature = null; //to keep track of the metric unit of temp
+let celsiusTemperature = null; //to keep track of the metric unit of temp
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);

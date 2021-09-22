@@ -1,37 +1,64 @@
-h1 {
-  padding: 10px;
+h1,
+p {
+  padding: 0 0 0 10px;
+  margin: 0;
+  font-family: "Bebas Neue", cursive;
 }
 
 h2 {
   font-size: 20px;
-  text-align: center;
   margin-top: auto;
   margin-top: auto;
+  font-family: "Bebas Neue", cursive;
+  text-align: left;
 }
 
 h3 {
   padding-top: 10px;
   padding-bottom: 10px;
+  font-family: "Bebas Neue", cursive;
 }
 
-a {
-  text-decoration: solid;
-  color: black;
+img {
+  display: block;
+  padding: 0;
+  font-family: "Bebas Neue", cursive;
+  float: right;
 }
+
 footer {
   text-align: center;
 }
 
-#weather-description:first-letter {
-  text-transform: capitalize;
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #494747;
+}
+#weather-description {
+  font-family: "Bebas Neue", cursive;
+  float: left;
+}
+
+#search-button,
+#city-input {
+  font-family: "Bebas Neue", cursive;
 }
 
 #geo-button {
   margin-left: 8px;
+  font-family: "Bebas Neue", cursive;
 }
-
+.last-updated {
+  margin-left: 8px;
+  font-weight: bold;
+  font-family: "Bebas Neue", cursive;
+}
 .currentTemperature {
   font-weight: bold;
+  font-size: 150px;
 }
 .box {
   border: solid #698796;
@@ -40,7 +67,9 @@ footer {
   width: 600px;
   background: #7799aa;
 }
-
+.container {
+  font-family: "Bebas Neue", cursive;
+}
 .rain-icon:hover,
 .sun-rain-city-icon:hover,
 .rain-city-icon:hover,
