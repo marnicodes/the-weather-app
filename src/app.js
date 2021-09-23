@@ -20,6 +20,36 @@ let day = days[now.getDay()];
 
 let currentDate = document.querySelector("#current-date");
 currentDate.innerHTML = `${day} ${hour}:${minutes}`;
+/////////// the forecast code
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`; ///to store the HTML of forecast
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+  days.forEach(function (day) {
+    //loops through collection, and uses next item from collection each time
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col-2">
+         <img
+           src="http://openweathermap.org/img/wn/10d@2x.png"
+           alt=""
+           width="40"
+         />
+         <div class="weather-forecast-date">${day}</div>
+         <div class="weather-forecast-temperatures">
+           <span class="weather-forecast-temp-max">12°</span>|
+           <span class="weather-forecast-temp-min">10°</span>
+         </div>
+       </div>
+     `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`; //closing the row element
+  forecastElement.innerHTML = forecastHTML;
+}
 
 /////////// the city searching code
 
@@ -109,3 +139,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Stockholm");
+displayForecast();
