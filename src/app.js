@@ -20,9 +20,11 @@ let day = days[now.getDay()];
 
 let currentDate = document.querySelector("#current-date");
 currentDate.innerHTML = `${day} ${hour}:${minutes}`;
+
 /////////// the forecast code
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`; ///to store the HTML of forecast
@@ -49,6 +51,12 @@ function displayForecast() {
 
   forecastHTML = forecastHTML + `</div>`; //closing the row element
   forecastElement.innerHTML = forecastHTML;
+}
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = `ff4151e1f397ca52bc01c2b445760854`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 /////////// the city searching code
@@ -91,6 +99,8 @@ function displayWeather(response) {
       "src",
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+
+  getForecast(response.data.coord);
 }
 
 function searchPosition(position) {
@@ -139,4 +149,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Stockholm");
-displayForecast();
