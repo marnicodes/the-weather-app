@@ -1,3 +1,10 @@
+body {
+  margin: 0 auto;
+  width: 600px;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #679b5e 0%, #ff9800 100%);
+}
+
 h1,
 p {
   padding: 0 0 0 10px;
@@ -13,6 +20,9 @@ h2 {
   text-align: left;
 }
 
+.navbar {
+  padding-top: 2rem;
+}
 div.container {
   display: block;
   padding: 0;
@@ -56,13 +66,6 @@ a:hover {
 .currentTemperature {
   font-weight: bold;
   font-size: 150px;
-}
-.box {
-  border: solid #698796;
-  border-radius: 10px;
-  margin: 0 auto;
-  width: 600px;
-  background: #7799aa;
 }
 
 .weather-forecast {

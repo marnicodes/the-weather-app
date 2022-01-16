@@ -87,7 +87,7 @@ function handleSubmit(event) {
   let city = document.querySelector("#city-input");
   searchCity(city.value);
 
-  city.value = "";
+  city.value = ""; //to remove input after search submit
 }
 let searchCityForm = document.querySelector("#search-city");
 searchCityForm.addEventListener("submit", handleSubmit);
